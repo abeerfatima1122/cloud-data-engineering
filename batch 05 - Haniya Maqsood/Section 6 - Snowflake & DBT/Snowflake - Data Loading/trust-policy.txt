@@ -1,0 +1,26 @@
+--======================
+ ROLE trust policy
+--======================
+
+
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "***"
+			},
+			"Action": "sts:AssumeRole",
+			"Condition": {
+				"StringEquals": {
+					"sts:ExternalId": "*****"
+				}
+			}
+		}
+	]
+}
+
+
+"AWS": "STORAGE_AWS_IAM_USER_ARN"
+"sts:ExternalId": "*****" -- STORAGE_AWS_EXTERNAL_ID
